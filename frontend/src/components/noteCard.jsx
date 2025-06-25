@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
-import { DeleteNoteById } from "../lib/apiCalls";
-import LoadingPage from "./loadingPage";
-import DeleteDialog from "./deleteNoteDialog.jsx";
+import { DeleteNoteById } from "../lib/apiCalls.js";
+import LoadingPage from "./loadingPage.jsx";
+import DeleteNoteDialog from "./deleteNoteDialog.jsx";
 
 const NoteCard = ({ note }) => {
   const [showModel, setshowModel] = useState(false);
@@ -137,7 +137,7 @@ const NoteCard = ({ note }) => {
         </div>
       </div>
       {showModel && (
-        <DeleteDialog
+        <DeleteNoteDialog
           handleDelete={handleDelete}
           onClose={() => setshowModel(false)}
         />

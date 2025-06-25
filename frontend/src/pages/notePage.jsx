@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { DeleteNoteById, GetNoteById } from "../lib/apiCalls.js";
 import LoadingPage from "../components/loadingPage.jsx";
-import EditDialog from "../components/editNoteDialog.jsx";
+import EditNoteDialog from "../components/editNoteDialog.jsx";
 
 const DeleteConfirmationModal = ({ onClose, onConfirm, isPending }) => (
   <div className="fixed inset-0 bg-base-900 bg-opacity-50 flex items-center justify-center z-50">
@@ -128,7 +128,6 @@ const NotePage = () => {
           </div>
         </div>
 
-        {/* Actions Section */}
         <div className="bg-base-50 p-6 md:p-10 flex flex-col justify-end items-center md:items-start space-y-4 md:w-64 border-t md:border-t-0 md:border-l border-base-200">
           <button
             onClick={() => setshowEditModel(true)}
@@ -156,8 +155,8 @@ const NotePage = () => {
       )}
 
       {showEditModel && (
-        <EditDialog
-          noteData={note} // Pass current note data to EditDialog
+        <EditNoteDialog
+          noteData={note} 
           onClose={() => setshowEditModel(false)}
         />
       )}

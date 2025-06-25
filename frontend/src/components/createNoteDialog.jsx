@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import Input from "./input.jsx";
 import { CreateNote } from "../lib/apiCalls.js";
 
-const CreateDialog = ({ onClose }) => {
+const CreateNoteDialog = ({ onClose }) => {
   const [noteData, setNoteData] = useState({
     title: "",
     content: "",
@@ -172,4 +172,4 @@ const CreateDialog = ({ onClose }) => {
   );
 };
 
-export default CreateDialog;
+export default CreateNoteDialog;

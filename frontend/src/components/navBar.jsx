@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { LogOutIcon, NotebookIcon } from "lucide-react";
 import toast from "react-hot-toast";
 
-import { AuthUser, LogOut } from "../lib/apiCalls";
-import LoadingPage from "./loadingPage";
-import ThemeSelector from "./themeSelector";
+import { AuthUser, LogOut } from "../lib/apiCalls.js";
+import LoadingPage from "./loadingPage.jsx";
+import ThemeSelector from "./themeSelector.jsx";
 
 const NavBar = () => {
   const { data: authUser, isLoading } = useQuery({

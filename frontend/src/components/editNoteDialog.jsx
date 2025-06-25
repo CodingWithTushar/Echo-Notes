@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 import Input from "./input";
 import toast from "react-hot-toast";
-import { EditNoteById, GetNoteById } from "../lib/apiCalls";
-import LoadingPage from "./loadingPage";
 
-const EditDialog = ({ onClose }) => {
+import { EditNoteById, GetNoteById } from "../lib/apiCalls.js";
+import LoadingPage from "./loadingPage.jsx";
+
+const EditNoteDialog = ({ onClose }) => {
   const { id } = useParams();
 
   const {
@@ -242,4 +243,4 @@ const EditDialog = ({ onClose }) => {
   );
 };
 
-export default EditDialog;
+export default EditNoteDialog;

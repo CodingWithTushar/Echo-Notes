@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+  
 import Input from "../components/input.jsx";
 import { SignUp } from "../lib/apiCalls.js";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { NotebookIcon } from "../components/noteBookIcon.jsx";
 
 const SignUpPage = () => {

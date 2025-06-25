@@ -1,6 +1,6 @@
 import { Trash2, X } from "lucide-react";
 
-const DeleteDialog = ({ handleDelete, onClose }) => {
+const DeleteNoteDialog = ({ handleDelete, onClose }) => {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -47,4 +47,4 @@ const DeleteDialog = ({ handleDelete, onClose }) => {
   );
 };
 
-export default DeleteDialog;
+export default DeleteNoteDialog;

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { PlusCircle, Search } from "lucide-react";
+
 import Input from "../components/input.jsx";
-import { AuthUser, GetAllNoteById } from "../lib/apiCalls";
+import { AuthUser, GetAllNoteById } from "../lib/apiCalls.js";
 import LoadingPage from "../components/loadingPage.jsx";
 import NoteCard from "../components/noteCard.jsx";
-import CreateDialog from "../components/createNoteDialog.jsx";
+import CreateNoteDialog from "../components/createNoteDialog.jsx";
 
 const HomePage = () => {
   const [searchingValue, setSearchingValue] = useState("");
@@ -67,7 +68,7 @@ const HomePage = () => {
           <PlusCircle size={20} />
           Create New Note
         </button>
-        {showModel && <CreateDialog onClose={() => setshowModel(false)} />}
+        {showModel && <CreateNoteDialog onClose={() => setshowModel(false)} />}
       </div>
 
       <hr className="my-4 border-t border-gray-200" />
